@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: var(--linen);
     font-family: "Playfair Display", serif;
@@ -61,6 +65,8 @@ main {
 .card {
     background-color: var(--linen);
     display: grid;
+    grid-template-rows: auto 1fr;
+    align-items: center;
     margin: 50px;
     padding: 20px;
     border: solid 1px var(--rose-taupe);
@@ -70,26 +76,49 @@ main {
 .card div {
     display: inherit;
     grid-template-columns: 2fr 1fr;
-    margin: 20px;
+    margin: 10px;
     align-items: center;
 }
 
 .card h2 {
-    background-color: #7d4f50ff;
+    height: 50px;
+    background-color: var(--rose-taupe);
     border-radius: 10px;
     padding: 10px;
     text-align: center;
     color: white;
 }
 
+.card p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: var(--rose-taupe);
+}
+
+.card a {
+    color: var(--rose-taupe);
+}
+
+.card li {
+    margin-left: 30px;
+}
+
+.card a:hover {
+    color: var(--old-rose);
+}
+
 .card img {
     width: 20rem;
-    border: 2px solid var(--old-rose)
+    max-width: 100%;
+    border: 2px solid var(--dun)
 }
 
 footer {
-    background-color: #7d4f50ff;
+    position: sticky;
+    background-color: var(--rose-taupe);
     display: flex;
     justify-content: center;
     padding: 20px;
+    margin: 0;
 }

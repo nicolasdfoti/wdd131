@@ -127,7 +127,9 @@ footer {
     color: white;
     background-color: var(--rose-taupe);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     padding: 20px;
     margin: 0;
 }

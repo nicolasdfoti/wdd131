@@ -36,7 +36,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    background-color: var(--cinereous);
+    background-color: var(--rose-taupe);
 }
 
 a {
@@ -48,7 +48,7 @@ a {
 }
 
 nav a:hover {
-    color: var(--rose-taupe);
+    color: var(--cinereous);
 }
 
 main {

@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", serif;
+}
+
+header {
+    background-color: rgb(159, 156, 156);
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+section {
+    background-color: antiquewhite;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+p {
+    padding: 20px;
+}

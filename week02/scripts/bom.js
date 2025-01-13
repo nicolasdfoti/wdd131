@@ -1,34 +1,33 @@
 // First Part
-let input = document.querySelector("#favchap");
-let button = document.querySelector("button");
-let list = document.querySelector("#list");
+const input = document.querySelector("#favchap");
+const button = document.querySelector("button");
+const list = document.querySelector("#list");
 
 // Second Part
-
-button.addEventListener("click", function() {
+button.addEventListener("click", function(){
 
     if (input.value.trim() === "") {
         input.focus();
     }
 
     else if (input.value.trim() != "") {
-        const titleLi = document.createElement("li");
+        const chapter = document.createElement("li");
         const deleteButton = document.createElement("button");
 
-        titleLi.textContent = input.value;
+        chapter.textContent = input.value;
         deleteButton.textContent = "X";
 
-        titleLi.append(deleteButton);
-
-        list.append(titleLi);
+        list.append(chapter);
+        chapter.append(deleteButton);
 
         input.value = "";
         input.focus();
-
-        deleteButton.addEventListener("click", function() {
-            list.removeChild(titleLi);
+    
+        deleteButton.addEventListener("click", function(){
+            chapter.remove();
             input.focus();
         })
 
     }
+
 })

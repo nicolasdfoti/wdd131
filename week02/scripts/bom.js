@@ -23,7 +23,7 @@ button.addEventListener("click", function(){
         input.value = "";
         input.focus();
     
-        deleteButton.addEventListener("click", function(){
+        deleteButton.addEventListener("click", function() {
             chapter.remove();
             input.focus();
         })

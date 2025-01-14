@@ -20,24 +20,35 @@ header {
     font-weight: bold;
 }
 
-nav {
-    display: inherit;
-    flex-direction: row;
-    position: absolute;
-    right: 1rem;
-}
-
 a {
     margin: 20px;
     padding: 20px;
     text-decoration: none;
     color: white;
     font-size: 20px;
+    display: none;
 }
 
-a:hover {
+.open a {
+	display: flex;
+    flex-direction: column;
+    right: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.open a:hover {
     color: black;
     background-color: white;
+}
+
+#menu {
+    right: 10px;
+    position: absolute;
+}
+
+#menu::before {
+    content: "☰";
 }
 
 main h2 {

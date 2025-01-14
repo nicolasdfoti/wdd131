@@ -56,7 +56,6 @@ a {
 main h2 {
     padding: 20px;
     text-align: center;
-    font-family: "Roboto", serif;
 }
 
 .images {
@@ -71,7 +70,6 @@ img {
 }
 
 figcaption {
-    font-family: "Roboto", serif;
     text-align: center;
     padding: 10px;
 }

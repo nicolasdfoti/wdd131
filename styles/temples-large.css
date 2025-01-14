@@ -1,4 +1,5 @@
 @media screen and (min-width: 1000px) {
+
     .images {
         grid-template: repeat(3, 1fr) / repeat(3, 1fr);
     }
@@ -11,6 +12,7 @@
     }
     
     a {
+        display: flex;
         margin: 20px;
         padding: 20px;
         text-decoration: none;
@@ -26,5 +28,5 @@
     #menu {
         display: none;
     }
-    
+
 }

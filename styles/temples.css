@@ -49,7 +49,7 @@ main h2 {
 .images {
     display: grid;
     justify-items: center;
-    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    grid-template: 1fr / 1fr;
 }
 
 img {

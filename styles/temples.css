@@ -14,10 +14,16 @@ header {
     text-align: center;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     color: white;
     font-weight: bold;
+}
+
+header h1 {
+    position: absolute;
+    left: 10px;
 }
 
 a {
@@ -26,7 +32,6 @@ a {
 
 .open a {
     display: block;
-    right: 1rem;
     color: white;
     text-decoration: none;
     font-size: 20px;

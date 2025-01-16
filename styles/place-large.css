@@ -1,0 +1,25 @@
+@media screen and (min-width: 1000px) {
+
+    section {
+        width: 30%;
+        position: absolute;
+        z-index: 1;
+        color: white;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .data {
+        left: 0;
+        top: 100px;
+        background-color: var(--moss-green-2);
+    }
+    
+    .weather {
+        right: 0;
+        bottom: -200px;
+        background-color: var(--moss-green);
+    }
+
+}
+

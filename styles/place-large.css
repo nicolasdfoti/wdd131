@@ -1,24 +1,54 @@
 @media screen and (min-width: 1000px) {
 
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Cardo", serif;
+    }
+    
+    :root {
+        --burgundy: #93032eff;
+        --buff: #c69f89ff;
+        --moss-green: #a6a15eff;
+        --moss-green-2: #84894aff;
+        --brunswick-green: #034c3cff;
+    }
+
+    body {
+        background-color: var(--burgundy);
+    }
+
     section {
         width: 30%;
         position: absolute;
         z-index: 1;
         color: white;
+        text-align: left;
+        border-radius: 8px;
         padding: 20px;
         margin: 20px;
     }
-    
+
+    h2 {
+        text-align: center;
+    }
+
     .data {
         left: 0;
         top: 100px;
         background-color: var(--moss-green-2);
     }
-    
+
     .weather {
         right: 0;
         bottom: -200px;
         background-color: var(--moss-green);
+        border-bottom: solid 2px var(--brunswick-green);
+    }
+
+    footer {
+        color: white;
     }
 
 }

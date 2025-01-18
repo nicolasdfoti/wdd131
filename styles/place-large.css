@@ -32,12 +32,13 @@
 
     h2 {
         text-align: center;
+        margin-bottom: 20px;
     }
 
     .data {
         left: 0;
         top: 100px;
-        background-color: var(--moss-green-2);
+        background-color: var(--moss-green);
     }
 
     .weather {

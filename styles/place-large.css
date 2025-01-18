@@ -42,7 +42,7 @@
 
     .weather {
         right: 0;
-        bottom: -200px;
+        bottom: -100px;
         background-color: var(--moss-green);
         border-bottom: solid 2px var(--brunswick-green);
     }

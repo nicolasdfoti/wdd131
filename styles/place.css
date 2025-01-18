@@ -34,15 +34,22 @@ picture img {
 }
 
 section {
-    width: 80%;
+    width: 100%;
     text-align: center;
     z-index: 1;
     color: white;
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .data {
     border-bottom: solid 2px var(--brunswick-green);
+    background-color: var(--moss-green-2);
+}
+
+.weather {
+    border-bottom: solid 2px var(--brunswick-green);
+    background-color: var(--moss-green);
 }
 
 h2 {

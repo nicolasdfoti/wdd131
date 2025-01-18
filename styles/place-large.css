@@ -37,13 +37,13 @@
 
     .data {
         left: 0;
-        top: 100px;
+        top: 120px;
         background-color: var(--moss-green);
     }
 
     .weather {
         right: 0;
-        bottom: -100px;
+        bottom: -50px;
         background-color: var(--moss-green);
         border-bottom: solid 2px var(--brunswick-green);
     }

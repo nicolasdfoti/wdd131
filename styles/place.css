@@ -34,7 +34,7 @@ picture img {
 
 section {
     width: 100%;
-    text-align: left;
+    text-align: center;
     z-index: 1;
     color: white;
     padding: 20px;
@@ -71,10 +71,6 @@ h2 {
 .weather-div img {
     width: 5rem;
     height: auto;
-}
-
-.weather-div img::before {
-    background-color: white;
 }
 
 section p {

@@ -1,4 +1,4 @@
-// First Part
+// First Part: Year and Last Modified
 
 let year = document.querySelector("#current-year");
 let lastModified = document.querySelector("#lastModified");
@@ -7,7 +7,7 @@ const today = new Date();
 year.innerHTML = `${today.getFullYear()}`
 lastModified.innerHTML = `${document.lastModified}`
 
-// Second Part
+// Second Part: Functions
 
 // Variables
 const temperature = 9;

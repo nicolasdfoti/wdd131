@@ -17,6 +17,7 @@
 
     body {
         background-color: var(--burgundy);
+        position: relative;
     }
 
     section {
@@ -59,7 +60,7 @@
 
     .weather {
         right: 0;
-        bottom: -50px;
+        bottom: 120px;
         background-color: var(--brunswick-green);
         border-bottom: solid 2px var(--buff);
     }

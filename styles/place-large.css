@@ -35,6 +35,29 @@
         margin-bottom: 20px;
     }
 
+    .weather-div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .weather-div img {
+        width: 5rem;
+        height: auto;
+    }
+    
+    .weather-div img::after {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 3px 7px;
+        font-size: 12px;
+        border-radius: 3px;
+    }
+
     .data {
         left: 0;
         top: 120px;
@@ -53,4 +76,3 @@
     }
 
 }
-

@@ -35,7 +35,7 @@ picture img {
 
 section {
     width: 100%;
-    text-align: center;
+    text-align: left;
     z-index: 1;
     color: white;
     padding: 20px;
@@ -61,6 +61,22 @@ h2 {
     text-align: center;
     font-size: 30px;
     color: var(--brunswick-green);
+}
+
+.weather-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-div img {
+    width: 5rem;
+    height: auto;
+}
+
+.weather-div img::before {
+    background-color: white;
 }
 
 section p {

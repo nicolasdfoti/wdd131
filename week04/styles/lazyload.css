@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+}
+
+img {
+    width: 400px;
+    height: 600px;
+    padding: 10px;
+}
+
+footer {
+    text-align: center;
+}

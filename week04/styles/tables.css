@@ -17,17 +17,25 @@ caption {
     padding: 20px;
 }
 
+table {
+    margin: 50px;
+    text-align: center;
+}
+
 th {
     background-color: gray;
     color: white;
     font-weight: bolder;
 }
 
-table {
-    margin: 50px;
-    text-align: center;
-}
-
 td, th {
     padding: 10px;
+}
+
+td {
+    border: 1px solid gray;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(128, 128, 128, 0.527);
 }

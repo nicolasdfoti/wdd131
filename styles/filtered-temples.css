@@ -3,6 +3,9 @@
     padding: 0;
 }
 
+
+/* Normal version */
+
 body {
     width: 100%;
     background-color: white;
@@ -58,22 +61,6 @@ main h2 {
     text-align: center;
 }
 
-.images {
-    display: grid;
-    justify-items: center;
-    grid-template: 1fr / 1fr;
-}
-
-img {
-    width: 15rem;
-    height: 12rem;
-}
-
-figcaption {
-    text-align: center;
-    padding: 10px;
-}
-
 footer {
     background-color: rgb(50, 1, 117);
     display: flex;
@@ -84,4 +71,26 @@ footer {
     margin-top: 20px;
     color: white;
     font-weight: bold;
+}
+
+
+/* Enhaced Album */
+
+.temples-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+}
+
+section {
+    background-color: rgba(128, 128, 128, 0.295);
+    color: black;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

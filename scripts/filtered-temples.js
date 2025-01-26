@@ -85,7 +85,7 @@ const temples = [
 		area: 30659,
 		imageUrl: 
 		"https://churchofjesuschristtemples.org/assets/img/temples/buenos-aires-argentina-temple/buenos-aires-argentina-temple-4087-main.jpg"
-	}
+	},
 	{
 		templeName: "Rome Italy",
 		location: "Rome, Italy",
@@ -93,7 +93,7 @@ const temples = [
 		area: 41010,
 		imageUrl: 
 		"https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-2642-main.jpg"
-	}
+	},
 	{
 		templeName: "Montevideo Uruguay",
 		location: "Montevideo, Uruguay",
@@ -103,3 +103,37 @@ const temples = [
 		"https://churchofjesuschristtemples.org/assets/img/temples/montevideo-uruguay-temple/montevideo-uruguay-temple-18474-main.jpg"
 	}
   ];
+
+
+createTempleCard();
+
+function createTempleCard() {
+
+	temples.forEach(temple => {
+
+		let card = document.createElement("section");
+		let name = document.createElement("h2");
+		let location = document.createElement("p");
+		let dedication = document.createElement("p");
+		let area = document.createElement("p");
+		let image = document.createElement("img");
+
+		name.textContent = temple.templeName;
+		location.innerHTML = temple.location;
+		dedication.innerHTML = temple.dedicated;
+		area.innerHTML = temple.area;
+		image.setAttribute("src", temple.imageUrl);
+		image.setAttribute("alt", `${temple.templeName} Temple.`);
+		image.setAttribute("loading", "lazy");
+
+		card.appendChild(name);
+		card.appendChild(location);
+		card.appendChild(dedication);
+		card.appendChild(area);
+		card.appendChild(image);
+
+		document.querySelector("#temples-container").appendChild(card);
+
+	})
+
+}

@@ -4,8 +4,8 @@ const year = document.querySelector("#current-year");
 const lastModified = document.querySelector("#lastModified");
 const today = new Date();
 
-year.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
-lastModified.innerHTML = `<span class="highlight">${document.lastModified}</span>`
+year.innerHTML = today.getFullYear();
+lastModified.innerHTML = document.lastModified;
 
 
 // Second Part:
@@ -102,7 +102,7 @@ const temples = [
 		imageUrl: 
 		"https://churchofjesuschristtemples.org/assets/img/temples/montevideo-uruguay-temple/montevideo-uruguay-temple-18474-main.jpg"
 	}
-  ];
+];
 
 
 createTempleCard();
@@ -118,12 +118,14 @@ function createTempleCard() {
 		let area = document.createElement("p");
 		let image = document.createElement("img");
 
-		name.textContent = temple.templeName;
+		name.innerHTML = temple.templeName;
 		location.innerHTML = temple.location;
 		dedication.innerHTML = temple.dedicated;
 		area.innerHTML = temple.area;
 		image.setAttribute("src", temple.imageUrl);
 		image.setAttribute("alt", `${temple.templeName} Temple.`);
+		image.setAttribute("width", "400");
+		image.setAttribute("height", "250");
 		image.setAttribute("loading", "lazy");
 
 		card.appendChild(name);
@@ -137,3 +139,5 @@ function createTempleCard() {
 	})
 
 }
+
+

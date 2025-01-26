@@ -37,18 +37,19 @@
     }
 
     section {
-        width: 90%;
+        display: inherit;
+        width: 95%;
         background-color: rgba(128, 128, 128, 0.295);
         border: 1px solid gray;
         color: black;
         padding: 20px;
         text-align: center;
+        justify-content: center;
     }
 
     img {
-        width: 100%;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 4px 8px rgba(26, 25, 25, 0.836);
     }
 
 }

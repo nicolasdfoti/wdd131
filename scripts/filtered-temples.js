@@ -163,7 +163,6 @@ oldTemples.addEventListener("click", () => {
 	const mainTitle = document.querySelector("#title");
 	mainTitle.innerHTML = "Old Temples";
 
-
 	const templesContainer = document.querySelector("#temples-container");
 	templesContainer.innerHTML = "";
 

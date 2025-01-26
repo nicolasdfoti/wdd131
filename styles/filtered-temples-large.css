@@ -27,20 +27,22 @@
 
     /* Enhaced Album */
 
-    .temples-container {
+    #temples-container {
+        width: 100%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
         gap: 20px;
         padding: 10px;
     }
 
     section {
-        width: 40%;
+        width: 90%;
         background-color: rgba(128, 128, 128, 0.295);
+        border: 1px solid gray;
         color: black;
         padding: 20px;
         text-align: center;
-        margin: 10px;
     }
 
     img {

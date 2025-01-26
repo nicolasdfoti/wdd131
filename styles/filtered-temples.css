@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 
@@ -33,6 +34,10 @@ a {
     display: none;
 }
 
+p {
+    padding: 5px;
+}
+
 .open a {
     display: block;
     color: white;
@@ -56,9 +61,10 @@ a {
     content: "☰";
 }
 
-main h2 {
+#main-h2 {
     padding: 20px;
     text-align: center;
+    font-size: 40px;
 }
 
 footer {
@@ -76,21 +82,24 @@ footer {
 
 /* Enhaced Album */
 
-.temples-container {
+#temples-container {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
     padding: 10px;
 }
 
 section {
     background-color: rgba(128, 128, 128, 0.295);
+    border: 1px solid gray;
     color: black;
     padding: 20px;
     text-align: center;
-    margin: 10px;
 }
 
 img {
+    width: 100%;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

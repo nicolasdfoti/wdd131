@@ -222,9 +222,9 @@ smallTemples.addEventListener("click", () => {
 	const templesContainer = document.querySelector("#temples-container");
 	templesContainer.innerHTML = "";
 
-	const largeTemplesList = temples.filter(temple => {
+	const smallTemplesList = temples.filter(temple => {
 		const area = (temple.area);
 		return area < 10000;
 	})
-	createTempleCard(largeTemplesList);
+	createTempleCard(smallTemplesList);
 })

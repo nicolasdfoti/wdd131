@@ -1,0 +1,9 @@
+@media screen and (min-width: 1000px) {
+
+    main {
+        max-width: 50%;
+        display: flex;
+        justify-self: center;
+    }
+
+}

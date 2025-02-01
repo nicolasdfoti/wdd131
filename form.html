@@ -19,13 +19,75 @@
 
         <main>
 
-            <form method="get" action="review.html">
+            <form method="get" action="review.html" class="wf1">
 
-                <select name="product" id="product-name" required>
+                <fieldset>
 
-                    <option value="" disabled selected>Select a Product</option>
+                    <legend>Product Name*</legend>
 
-                </select>
+                    <select name="product" id="product-name" required>
+                        <option disabled selected>Select a Product</option>
+                    </select>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Overall Rating*</legend>
+
+                    <div class="radio-container">
+                        <label><input type="radio" name="rating" value="rating" required>&star;</label>
+                        <label><input type="radio" name="rating" value="rating" required>&star; &star;</label>
+                        <label><input type="radio" name="rating" value="rating" required>&star; &star; &star;</label>
+                        <label><input type="radio" name="rating" value="rating" required>&star; &star; &star; &star;</label>
+                        <label><input type="radio" name="rating" value="rating" required>&star; &star; &star; &star; &star;</label>
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Date of Installation*</legend>
+
+                    <input type="date" id="date" name="installation" required>
+
+                </fieldset>
+
+                
+                <fieldset>
+
+                    <legend>Which features did you find useful in the product? <span id="italic">(Check all that apply)</span></legend>
+
+                    <div class="checkbox-container">
+                        <label><input type="checkbox" id="checkbox" name="durability" value="yes">Durability</label>
+                        <label><input type="checkbox" id="checkbox" name="ease" value="yes">Ease of Use</label>
+                        <label><input type="checkbox" id="checkbox" name="performance" value="yes">Performance</label>
+                        <label><input type="checkbox" id="checkbox" name="design" value="yes">Design</label>
+                    </div>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Written Review <span id="optional">(Optional)</span></legend>
+                    
+                    <input type="textarea" id="textarea" name="written">
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Your Name<span id="optional">(Optional)</span></legend>
+
+                    <input type="text" id="name" name="name">
+
+                </fieldset>
+
+                <input id="submit" type="submit" value="Submit my Review">
 
             </form>
 

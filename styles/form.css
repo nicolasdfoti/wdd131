@@ -14,14 +14,100 @@ header {
     margin-bottom: 20px;
 }
 
-form {
-    background-color: rgb(234, 211, 255);
+.wf1 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(215, 206, 223);
     margin: 20px;
-    border: .5px solid black;
     border-radius: 6px;
 }
 
+.wf1 fieldset {
+    border: none;
+}
 
+.wf1 legend {
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 20px 0 5px 5px;
+}
+
+:required {
+    border-bottom: 5px solid red;
+}
+
+.wf1 select, 
+option, #date {
+    height: 44px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 0 20px 25px;
+    color: black;
+    font-weight: bold;
+}
+
+.radio-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.radio-container label {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px;
+}
+
+#italic {
+    font-style: italic;
+    margin-left: 25px;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.checkbox-container label {
+    display: flex;
+    align-items: center;
+}
+
+.wf1 input[type="checkbox"] {
+    margin: 10px 10px 0 25px;
+    height: 20px;
+    width: 20px;
+}
+
+#optional {
+    font-size: 15px;
+    margin-left: 5px;
+    margin-top: 35px;
+    color: blue;
+}
+
+#textarea, #name, #submit {
+    margin: 0 0 20px 25px;
+    height: 100px;
+    width: 90%;
+    text-wrap: wrap;
+}
+
+#name, #submit {
+    max-height: 50px;
+    font-size: 20px;
+}
+
+#submit {
+    margin-top: 20px;
+    box-shadow: 1px 1px 4px 1px black;
+}
+
+.wf1 input:required:valid {
+    border-bottom: solid 8px green;
+}
 
 footer {
     background-color: rgb(38, 5, 46);

@@ -19,7 +19,7 @@ button.addEventListener("click", function(){
 
         input.value = "";
 
-        input.value.focus();
+        input.focus();
 
     }
 
@@ -27,6 +27,8 @@ button.addEventListener("click", function(){
 
 // Third Part
 let chaptersArray = getChapterList() || [];
+
+console.log("Capítulos cargados desde localStorage:", chaptersArray); 
 
 chaptersArray.forEach(chapter => {
     displayList(chapter);
@@ -36,16 +38,17 @@ function displayList(item) {
     const chapter = document.createElement("li");
     const deleteButton = document.createElement("button");
 
-    chapter.textContent = input.value;
+    chapter.textContent = item;
     deleteButton.textContent = "X";
 
     list.append(chapter);
     chapter.append(deleteButton);
 
-    input.value = "";
+    input.value = item;
     input.focus();
 
     deleteButton.addEventListener("click", function() {
+        deleteChapter(item);
         chapter.remove();
         input.focus();
     })
@@ -56,7 +59,7 @@ function setChapterList() {
 }
 
 function getChapterList() {
-    return JSON.parse(localStorage.getItem("myFavBOMList"));
+    return JSON.parse(localStorage.getItem("myFavBOMList")) || [];
 }
 
 function deleteChapter(chapter) {

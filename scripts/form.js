@@ -25,3 +25,36 @@ const products = [
       averagerating: 5.0
     }
 ];
+
+// Searching for Select
+let select = document.querySelector("select");
+
+// Function to display options and append them to select
+function displayOption(item) {
+
+    let option = document.createElement("option");
+
+    option.value = item.id;
+    option.textContent = item.name.toUpperCase();
+
+    select.appendChild(option);
+
+}
+
+// Iterating through the array
+products.forEach(product => {
+    displayOption(product);
+})
+
+// Changing borderBottom
+select.addEventListener("change", function() {
+
+    if (select.checkValidity()) {
+        select.style.borderBottom = "5px solid green";
+    }
+
+    else {
+        select.style.borderBottom = "5px solid red";
+    }
+
+})

@@ -36,7 +36,6 @@ header {
 option, #date {
     height: 44px;
     width: 100%;
-    max-width: 400px;
     margin: 0 0 20px 0;
     color: black;
     font-weight: bold;
@@ -83,7 +82,7 @@ option {
 
 .optional {
     font-size: 15px;
-    margin-top: 35px;
+    margin-left: 3px;
     color: blue;
 }
 
@@ -108,13 +107,13 @@ option {
     box-shadow: 1px 1px 4px 1px black;
 }
 
-.wf1 input:required,
-.wf1 textarea:required {
+.wf1 select:required,
+.wf1 input:required {
     border-bottom: 5px solid red;
 }
 
 .wf1 input:required:valid {
-    border-bottom: solid 8px green;
+    border-bottom: solid 5px green;
 }
 
 footer {

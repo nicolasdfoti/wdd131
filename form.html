@@ -25,20 +25,22 @@
 
             <form method="get" action="review.html" class="wf1">
 
+                <legend>Enter your information:</legend>
+
                 <fieldset>
 
-                    <legend>Product Name*</legend>
-
-                    <select name="product" id="product-name" required>
-                        <option value="" disabled selected>Select a Product</option>
-                    </select>
+                    <label class="main-label" for="product-name">Product Name*
+                        <select name="product" id="product-name" required>
+                            <option value="" disabled selected>Select a Product</option>
+                        </select>
+                    </label>
 
                 </fieldset>
 
 
                 <fieldset>
 
-                    <legend>Overall Rating*</legend>
+                    <div class="main-label">Overall Rating*</div>
 
                     <div class="radio-container">
                         <label><input type="radio" name="rating" value="rating" required>&star;</label>
@@ -53,16 +55,14 @@
 
                 <fieldset>
 
-                    <legend>Date of Installation*</legend>
-
-                    <label><input type="date" id="date" name="installation" required></label>
+                    <label class="main-label" for="date">Date of Installation<input type="date" id="date" name="installation" required></label>
 
                 </fieldset>
 
                 
                 <fieldset>
 
-                    <legend>Which features did you find useful in the product?</legend>
+                    <div class="main-label">Which features did you find useful in the product?</div>
                     <p><span id="italic">(Check all that apply)</span></p>
 
                     <div class="checkbox-container">
@@ -77,18 +77,14 @@
 
                 <fieldset>
 
-                    <legend>Written Review <span class="optional">(Optional)</span></legend>
-                    
-                    <label><textarea name="textarea" id="textarea"></textarea></label>
+                    <label class="main-label" for="textarea">Written Review<span class="optional">(Optional)</span> <textarea name="textarea" id="textarea"></textarea></label>
 
                 </fieldset>
 
 
                 <fieldset>
 
-                    <legend>Your Name<span class="optional">(Optional)</span></legend>
-
-                    <label><input type="text" id="name" name="name"></label>
+                    <label class="main-label">Your Name<span class="optional">(Optional)</span> <input type="text" id="name" name="name"></label>
 
                 </fieldset>
 

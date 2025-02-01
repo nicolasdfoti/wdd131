@@ -1,3 +1,11 @@
+let year = document.querySelector("#current-year");
+let lastModified = document.querySelector("#lastModified");
+let today = new Date();
+
+year.innerHTML = `${today.getFullYear()}`;
+lastModified.innerHTML = `${document.lastModified}`;
+
+
 const products = [
     {
       id: "fc-1888",
@@ -29,7 +37,7 @@ const products = [
 // Searching for Select
 let select = document.querySelector("select");
 
-// Function to display options and append them to select
+// Function to display options and append them to Select
 function displayOption(item) {
 
     let option = document.createElement("option");
@@ -41,7 +49,7 @@ function displayOption(item) {
 
 }
 
-// Iterating through the array
+// Iterating through the array and displaying names
 products.forEach(product => {
     displayOption(product);
 })
@@ -57,4 +65,26 @@ select.addEventListener("change", function() {
         select.style.borderBottom = "5px solid red";
     }
 
+})
+
+// Getting localStorage
+let reviewCount = localStorage.getItem("reviewCount");
+
+if (!reviewCount) {
+    reviewCount = 0;
+}
+
+else {
+    reviewCount = parseInt(reviewCount);
+}
+
+let form = document.querySelector("form");
+
+form.addEventListener("submit", function() {
+
+    reviewCount++;
+    localStorage.setItem("reviewCount", reviewCount);
+
+    let revCount = document.querySelector("#reviewCount");
+    revCount.textContent = `Total Uploads: ${reviewCount}`;
 })

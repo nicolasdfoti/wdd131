@@ -27,7 +27,7 @@
                     <legend>Product Name*</legend>
 
                     <select name="product" id="product-name" required>
-                        <option disabled selected>Select a Product</option>
+                        <option value="" disabled selected>Select a Product</option>
                     </select>
 
                 </fieldset>
@@ -52,20 +52,21 @@
 
                     <legend>Date of Installation*</legend>
 
-                    <input type="date" id="date" name="installation" required>
+                    <label><input type="date" id="date" name="installation" required></label>
 
                 </fieldset>
 
                 
                 <fieldset>
 
-                    <legend>Which features did you find useful in the product? <span id="italic">(Check all that apply)</span></legend>
+                    <legend>Which features did you find useful in the product?</legend>
+                    <p><span id="italic">(Check all that apply)</span></p>
 
                     <div class="checkbox-container">
-                        <label><input type="checkbox" id="checkbox" name="durability" value="yes">Durability</label>
-                        <label><input type="checkbox" id="checkbox" name="ease" value="yes">Ease of Use</label>
-                        <label><input type="checkbox" id="checkbox" name="performance" value="yes">Performance</label>
-                        <label><input type="checkbox" id="checkbox" name="design" value="yes">Design</label>
+                        <label><input type="checkbox" id="durability" name="durability" value="yes">Durability</label>
+                        <label><input type="checkbox" id="ease" name="ease" value="yes">Ease of Use</label>
+                        <label><input type="checkbox" id="performance" name="performance" value="yes">Performance</label>
+                        <label><input type="checkbox" id="design" name="design" value="yes">Design</label>
                     </div>
 
                 </fieldset>
@@ -73,18 +74,18 @@
 
                 <fieldset>
 
-                    <legend>Written Review <span id="optional">(Optional)</span></legend>
+                    <legend>Written Review <span class="optional">(Optional)</span></legend>
                     
-                    <input type="textarea" id="textarea" name="written">
+                    <label><textarea name="textarea" id="textarea"></textarea></label>
 
                 </fieldset>
 
 
                 <fieldset>
 
-                    <legend>Your Name<span id="optional">(Optional)</span></legend>
+                    <legend>Your Name<span class="optional">(Optional)</span></legend>
 
-                    <input type="text" id="name" name="name">
+                    <label><input type="text" id="name" name="name"></label>
 
                 </fieldset>
 

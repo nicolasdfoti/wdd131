@@ -201,6 +201,10 @@
         border-radius: 5px;
     }
 
+    .maps {
+        align-self: center;
+    }
+
     :required {
         border-bottom: 5px solid red;
     }

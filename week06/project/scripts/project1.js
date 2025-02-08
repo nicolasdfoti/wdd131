@@ -23,24 +23,33 @@ const actionButton = document.querySelector("#dashboard-submit");
 nameInput.value = localStorage.getItem("nameInput") || "";
 emailInput.value = localStorage.getItem("emailInput") || "";
 
-const dashboardFunctions = document.querySelector("#dashboard-functions");
+const formData = [
+    { key: "nameInput", value: nameInput.value },
+    { key: "emailInput", value: emailInput.value }
+];
 
-let money = 0;
-let additionalMoney = 0;
+const dashboardFunctions = document.querySelector("#dashboard-functions");
 
 function displayMoney() {
 
-    if (selectInput.value === "basic") {
-        money += 100;
+    let money = 0;
+    let additionalMoney = 0;
+
+    const packages = [
+        { name: "basic", price: 100 },
+        { name: "premium", price: 300 },
+        { name: "deluxe", price: 700 }
+    ];
+
+    function getPackagePrice(packageName) {
+
+        const selectedPackage = packages.find(pkg => pkg.name === packageName);
+        return selectedPackage ? selectedPackage.price : 0;
+
     }
 
-    else if (selectInput.value === "premium") {
-        money += 300;
-    }
+    money = getPackagePrice(selectInput.value);
 
-    else if (selectInput.value === "deluxe") {
-        money += 700;
-    }
 
     if (additionalInput.value === "none") {
         additionalMoney += 0;
@@ -84,7 +93,7 @@ actionButton.addEventListener("click", (event) => {
         return;
     }
 
-    money = displayMoney(money);
+    money = displayMoney();
 
     const message2 = document.createElement("p");
     const message3 = document.createElement("p");
@@ -101,7 +110,8 @@ actionButton.addEventListener("click", (event) => {
         dashboardFunctions.appendChild(message4);
     }
 
-    localStorage.setItem("nameInput", nameInput.value);
-    localStorage.setItem("emailInput", emailInput.value);
+    formData.forEach(data => {
+        localStorage.setItem(data.key, data.value);
+    })
 
 });

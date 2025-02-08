@@ -99,19 +99,14 @@ actionButton.addEventListener("click", (event) => {
     message4.innerHTML = `Your package "${packageInput.value}" will arrive on ${dateInput.value} for $${money}`;
 
     dashboardFunctions.innerHTML = "";
+    
     if (dashboardFunctions) {
         dashboardFunctions.appendChild(message2);
         dashboardFunctions.appendChild(message3);
         dashboardFunctions.appendChild(message4);
     }
 
-    const formData = [
-        { key: "nameInput", value: nameInput.value },
-        { key: "emailInput", value: emailInput.value }
-    ];
-
-    formData.forEach(data => {
-        localStorage.setItem(data.key, data.value);
-    })
+    localStorage.setItem("nameInput", nameInput.value);
+    localStorage.setItem("emailInput", emailInput.value);
 
 });

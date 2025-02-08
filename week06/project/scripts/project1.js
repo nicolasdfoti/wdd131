@@ -23,11 +23,6 @@ const actionButton = document.querySelector("#dashboard-submit");
 nameInput.value = localStorage.getItem("nameInput") || "";
 emailInput.value = localStorage.getItem("emailInput") || "";
 
-const formData = [
-    { key: "nameInput", value: nameInput.value },
-    { key: "emailInput", value: emailInput.value }
-];
-
 const dashboardFunctions = document.querySelector("#dashboard-functions");
 
 function displayMoney() {
@@ -109,6 +104,11 @@ actionButton.addEventListener("click", (event) => {
         dashboardFunctions.appendChild(message3);
         dashboardFunctions.appendChild(message4);
     }
+
+    const formData = [
+        { key: "nameInput", value: nameInput.value },
+        { key: "emailInput", value: emailInput.value }
+    ];
 
     formData.forEach(data => {
         localStorage.setItem(data.key, data.value);

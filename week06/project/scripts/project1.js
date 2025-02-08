@@ -99,13 +99,14 @@ actionButton.addEventListener("click", (event) => {
     message4.innerHTML = `Your package "${packageInput.value}" will arrive on ${dateInput.value} for $${money}`;
 
     dashboardFunctions.innerHTML = "";
+    
     if (dashboardFunctions) {
         dashboardFunctions.appendChild(message2);
         dashboardFunctions.appendChild(message3);
         dashboardFunctions.appendChild(message4);
     }
 
-    localStorage.setItem("nameInput", nameInput.value);
-    localStorage.setItem("emailInput", emailInput.value);
+    localStorage.setItem("nameInput", "John Doe");
+    localStorage.setItem("emailInput", "John@hola");
 
 });

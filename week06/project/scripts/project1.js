@@ -20,8 +20,8 @@ const additionalInput = document.querySelector("#dashboard-additional");
 
 const actionButton = document.querySelector("#dashboard-submit");
 
-nameInput.value = localStorage.getItem("nameInput") || "";
-emailInput.value = localStorage.getItem("emailInput") || "";
+nameInput.value = localStorage.getItem("nameInput");
+emailInput.value = localStorage.getItem("emailInput");
 
 const dashboardFunctions = document.querySelector("#dashboard-functions");
 
@@ -99,14 +99,19 @@ actionButton.addEventListener("click", (event) => {
     message4.innerHTML = `Your package "${packageInput.value}" will arrive on ${dateInput.value} for $${money}`;
 
     dashboardFunctions.innerHTML = "";
-    
     if (dashboardFunctions) {
         dashboardFunctions.appendChild(message2);
         dashboardFunctions.appendChild(message3);
         dashboardFunctions.appendChild(message4);
     }
 
-    localStorage.setItem("nameInput", "John Doe");
-    localStorage.setItem("emailInput", "John@hola");
+    const formData = [
+        { key: "nameInput", value: nameInput.value },
+        { key: "emailInput", value: emailInput.value }
+    ];
+
+    formData.forEach(data => {
+        localStorage.setItem(data.key, data.value);
+    })
 
 });

@@ -13,9 +13,9 @@ lastModified.innerHTML = `Last Modified: ${document.lastModified}`;
 
 const contactName = document.querySelector("#contact-name");
 const contactEmail = document.querySelector("#contact-email");
-const contactPhone = document.querySelector("#contact-telephone")
+const contactPhone = document.querySelector("#contact-telephone");
 
-const contactButton = document.querySelector("#contact-button")
+const contactButton = document.querySelector("#contact-button");
 
 contactName.value = localStorage.getItem("contactName");
 contactEmail.value = localStorage.getItem("contactEmail");
@@ -37,8 +37,8 @@ contactButton.addEventListener("click", (event) => {
         return;
     }
 
-    message.innerHTML = `Thanks ${contactName.value}!`;
-    message1.innerHTML = `We'll reach you out soon!`;
+    message.innerHTML = `Thanks, ${contactName.value}!`;
+    message1.innerHTML = `We'll reach you out soon through ${contactEmail.value}!`;
 
     localStorage.setItem("contactName", contactName.value);
     localStorage.setItem("contactEmail", contactEmail.value);

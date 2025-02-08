@@ -83,7 +83,7 @@ actionButton.addEventListener("click", (event) => {
 
     event.preventDefault();
 
-    if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || packageInput.value.trim() === "") {
+    if (nameInput.value.trim() === "" || emailInput.value.trim() === "" || dateInput.value.trim() === "" || packageInput.value.trim() === "") {
         alert("Please complete all the required (red) fields");
         return;
     }
@@ -105,13 +105,7 @@ actionButton.addEventListener("click", (event) => {
         dashboardFunctions.appendChild(message4);
     }
 
-    const formData = [
-        { key: "nameInput", value: nameInput.value },
-        { key: "emailInput", value: emailInput.value }
-    ];
-
-    formData.forEach(data => {
-        localStorage.setItem(data.key, data.value);
-    })
+    localStorage.setItem("nameInput", nameInput.value);
+    localStorage.setItem("emailInput", emailInput.value);
 
 });
